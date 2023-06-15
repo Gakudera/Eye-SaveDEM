@@ -1,0 +1,115 @@
+﻿<Window x:Class="EyeSave.Views.Autorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EyeSave.Views"
+        mc:Ignorable="d"
+        Title="Autorization" Height="700" Width="500">
+
+    <Window.Resources>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter  Property="TextElement" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="{StaticResource ColorPrimary}">
+       
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="22*"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="1" 
+                Source="C:\Users\Jenkins\Desktop\Варианты экзамена\eye-save-main\EyeSave\EyeSave\Resources\LogoБР.webp"
+               />
+
+            <TextBlock 
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="Авторизация"
+                FontSize="30"
+                FontWeight="Bold"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" Height="36" Width="210"/>
+
+            <StackPanel
+                Grid.Row="4"
+                Grid.Column="1"
+                HorizontalAlignment="Center" Margin="0,35,0,0" Grid.RowSpan="2" Width="290">
+                <TextBlock
+                    Text="Логин:"
+                    FontSize="20"
+                    FontWeight="Bold"/>
+                <StackPanel
+                    Orientation="Horizontal">
+ 
+                    <TextBox
+                        x:Name="LoginBox"
+                        BorderBrush="Black"
+                        BorderThickness="1"
+                        Margin="0,5,0,0" Width="290" Height="30"
+                      />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel
+                Grid.Row="6"
+                Grid.Column="1"
+                HorizontalAlignment="Center" Margin="0,30,0,0" Grid.RowSpan="2" Width="290">
+                <TextBlock
+                    Text="Пароль:"
+                    FontSize="20"
+                    FontWeight="Bold"/>
+                <StackPanel
+                    Orientation="Horizontal">
+                    
+                        
+                 
+                    <TextBox
+                        x:Name="PasswordBox"
+                        BorderBrush="Black"
+                        BorderThickness="1"
+                        Margin="0,5,0,0" Width="291"  Height="30"
+                        />
+                </StackPanel>
+            </StackPanel>
+
+            <Button
+                
+                Grid.Row="9"
+                Grid.Column="1"
+                Margin="10,10,10,10"
+                FontSize="20"
+                Content="Войти"
+                Width="200"
+                Background="Orange"
+                />
+        </Grid>
+
+    </Grid>
+</Window>
